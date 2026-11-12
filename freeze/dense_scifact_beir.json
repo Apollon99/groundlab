@@ -1,0 +1,8 @@
+{
+  "code_tree": "66792d6e601cbcd925fc65aa0719d4d420a0a607",
+  "config_sha256": "ce0e741696f0e62b38458e04fd8a00bb5ae0f0569d937d24dcf121ed6e918026",
+  "data_manifest_sha256": "f214daa36047da7388ac225d00fbd376f582212321e7f59be1a623e0f95974fe",
+  "experiment": "dense_scifact_beir",
+  "protocol_sha256": "f1700843aa7734b92d89bd0b9bb451d4cd1adc48b1f9a7dc95a2338eea8f4ad9",
+  "uv_lock_sha256": "83e89707d889a29da2cf8b3793560ff590dbf1e5959d22adafcecb27d7642d2f"
+}

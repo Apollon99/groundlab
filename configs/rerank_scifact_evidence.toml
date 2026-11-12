@@ -1,0 +1,33 @@
+# Hybrid + rerank arm (D-027, D-028). The fusion block and the parent configs must be identical
+# to hybrid_scifact_evidence.toml (tested). The cross-encoder scores only the first 30 fused
+# candidates; the rest of the list is left untouched.
+[experiment]
+name = "rerank_scifact_evidence"
+description = "Hybrid top-30 reranked by ms-marco-MiniLM-L6-v2 (pinned, CUDA FP32) on the SciFact evidence view."
+
+[dataset]
+name = "scifact"
+view = "evidence"
+
+[retriever]
+kind = "rerank"
+fusion = "rrf"
+rrf_k = 60
+parent_depth = 100
+bm25_config = "bm25_scifact_evidence.toml"
+dense_config = "dense_scifact_evidence.toml"
+model = "ms-marco-MiniLM-L6-v2"
+revision = "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+max_length = 512
+rerank_depth = 30
+batch_size = 32
+attn_implementation = "eager"
+dtype = "float32"
+device = "cuda"
+
+[run]
+depth = 100
+latency_warmup = 10
+
+[evaluation]
+metrics = ["ndcg@10", "recall@10", "recall@100", "mrr@10"]

@@ -1,0 +1,8 @@
+{
+  "code_tree": "66792d6e601cbcd925fc65aa0719d4d420a0a607",
+  "config_sha256": "5293ed8a16a5608c7bdd3cec6bf0b493d9fd807e795a9de2ac3ec3b3a0a0624e",
+  "data_manifest_sha256": "f214daa36047da7388ac225d00fbd376f582212321e7f59be1a623e0f95974fe",
+  "experiment": "bm25_scifact_evidence",
+  "protocol_sha256": "f1700843aa7734b92d89bd0b9bb451d4cd1adc48b1f9a7dc95a2338eea8f4ad9",
+  "uv_lock_sha256": "83e89707d889a29da2cf8b3793560ff590dbf1e5959d22adafcecb27d7642d2f"
+}

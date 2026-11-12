@@ -1,0 +1,37 @@
+# Environments
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Data, model weights, indexes and run outputs (never committed; see docs/DECISIONS.md)
+/data/
+/artifacts/
+/outputs/
+*.part
+*.safetensors
+*.bin
+*.pt
+*.onnx
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,16 @@
+{
+  "model": {
+    "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "path": "artifacts/models/qwen-m7/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e"
+  },
+  "runtime": {
+    "release": "b12308",
+    "commit": "664f031f4",
+    "archive": "artifacts/runtime/llama-b12308/llama-b12308-bin-win-cpu-x64.zip",
+    "archive_sha256": "f03636ea6d5571195df28702f857a1148a68a80b82e547ad5eac19f4cfe0e6b0",
+    "path": "artifacts/runtime/llama-b12308/bin/llama-server.exe",
+    "sha256": "c7ae3a44dfeaac14486b0f4f0f2ee99a0c67a817da5d88f7ceee7a8b8e0a4b31"
+  }
+}

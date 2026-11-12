@@ -1,0 +1,8 @@
+{
+  "code_tree": "66792d6e601cbcd925fc65aa0719d4d420a0a607",
+  "config_sha256": "4f1272df3e1e6a1557e11680fc514667c7ab608a8b8edb10f0a8b9edc5ed48f4",
+  "data_manifest_sha256": "40e2a8351647d12403d6a753fa2a59ea25b69fb16599cc4809ad27e55810335d",
+  "experiment": "rerank_nfcorpus",
+  "protocol_sha256": "f1700843aa7734b92d89bd0b9bb451d4cd1adc48b1f9a7dc95a2338eea8f4ad9",
+  "uv_lock_sha256": "83e89707d889a29da2cf8b3793560ff590dbf1e5959d22adafcecb27d7642d2f"
+}

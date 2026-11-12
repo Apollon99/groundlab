@@ -1,0 +1,21 @@
+# Primary view: SciFact evidence-bearing claims (Ai2 evidence -> graded relevance 1).
+[experiment]
+name = "bm25_scifact_evidence"
+description = "BM25 (Lucene variant) on the SciFact evidence view."
+
+[dataset]
+name = "scifact"
+view = "evidence"
+
+[retriever]
+kind = "bm25"
+method = "lucene"
+k1 = 1.2
+b = 0.75
+tokenizer = "regex_casefold_snowball_en"
+
+[run]
+depth = 100
+
+[evaluation]
+metrics = ["ndcg@10", "recall@10", "recall@100", "mrr@10"]

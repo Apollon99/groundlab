@@ -1,0 +1,24 @@
+# Hybrid arm (D-018, D-027): RRF k=60 over the BM25 and dense top-100 of the parent configs
+# named below (same directory). No padding; fixed, not tuned.
+[experiment]
+name = "hybrid_nfcorpus"
+description = "RRF (k=60) of BM25 and bge-small-en-v1.5 top-100 on NFCorpus."
+
+[dataset]
+name = "nfcorpus"
+view = "beir"
+
+[retriever]
+kind = "hybrid"
+fusion = "rrf"
+rrf_k = 60
+parent_depth = 100
+bm25_config = "bm25_nfcorpus.toml"
+dense_config = "dense_nfcorpus.toml"
+
+[run]
+depth = 100
+latency_warmup = 10
+
+[evaluation]
+metrics = ["ndcg@10", "recall@10", "recall@100", "mrr@10"]

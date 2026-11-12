@@ -1,0 +1,31 @@
+# Dense arm (D-019, D-019a, D-020, D-021, D-022). Every setting is explicit.
+[experiment]
+name = "dense_scifact_beir"
+description = "bge-small-en-v1.5 (pinned), CUDA FP32, exact dot product, on the SciFact BEIR-qrels view."
+
+[dataset]
+name = "scifact"
+view = "beir"
+
+[retriever]
+kind = "dense"
+model = "bge-small-en-v1.5"
+revision = "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+pooling = "cls"
+normalize = true
+max_length = 512
+truncation_side = "right"
+query_instruction = "Represent this sentence for searching relevant passages: "
+document_instruction = ""
+document_separator = "\n"
+attn_implementation = "eager"
+dtype = "float32"
+device = "cuda"
+batch_size = 64
+
+[run]
+depth = 100
+latency_warmup = 10
+
+[evaluation]
+metrics = ["ndcg@10", "recall@10", "recall@100", "mrr@10"]

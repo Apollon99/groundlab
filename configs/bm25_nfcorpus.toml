@@ -1,0 +1,21 @@
+# Secondary dataset: NFCorpus (BEIR qrels, grades 1 and 2).
+[experiment]
+name = "bm25_nfcorpus"
+description = "BM25 (Lucene variant) on NFCorpus."
+
+[dataset]
+name = "nfcorpus"
+view = "beir"
+
+[retriever]
+kind = "bm25"
+method = "lucene"
+k1 = 1.2
+b = 0.75
+tokenizer = "regex_casefold_snowball_en"
+
+[run]
+depth = 100
+
+[evaluation]
+metrics = ["ndcg@10", "recall@10", "recall@100", "mrr@10"]

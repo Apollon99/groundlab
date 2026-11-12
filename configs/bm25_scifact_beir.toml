@@ -1,0 +1,21 @@
+# Secondary view: SciFact with BEIR qrels (cited docs, includes no-evidence claims).
+[experiment]
+name = "bm25_scifact_beir"
+description = "BM25 (Lucene variant) on the SciFact BEIR-qrels view."
+
+[dataset]
+name = "scifact"
+view = "beir"
+
+[retriever]
+kind = "bm25"
+method = "lucene"
+k1 = 1.2
+b = 0.75
+tokenizer = "regex_casefold_snowball_en"
+
+[run]
+depth = 100
+
+[evaluation]
+metrics = ["ndcg@10", "recall@10", "recall@100", "mrr@10"]
