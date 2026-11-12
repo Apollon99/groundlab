@@ -1,0 +1,5 @@
+arm,claims,correct,grounded,evidence,rationale,citation_correct,citation_attempts,abstained,invalid,timeout,documents_truncated
+closed_book,60,5,,,,0,4,47,4,0,0
+bm25,60,37,18,51,51,46,81,0,0,0,5
+rerank,60,34,21,55,55,51,81,0,0,0,6
+oracle,60,31,31,60,60,64,64,0,0,0,4
