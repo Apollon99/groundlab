@@ -28,9 +28,11 @@ In the exploratory views, hybrid RRF had the highest nDCG@10 on SciFact with BEI
 (0.7280 vs 0.7007 with reranking) and on NFCorpus (0.3640 vs 0.3587). These views were not part
 of the confirmatory test.
 
-**Downstream claim verification (M7).** A separate, descriptive study gave a pinned local
-generator (Qwen2.5-1.5B-Instruct Q4_K_M on CPU) the top three abstracts from each arm for 60
-balanced SciFact claims. Moving from BM25 to reranked context raised grounded accuracy from
+**Downstream claim verification (M7).** A separate, descriptive study used a pinned local
+generator (Qwen2.5-1.5B-Instruct Q4_K_M on CPU) to evaluate 60 balanced SciFact claims under
+four conditions: closed book with no abstracts, the top three abstracts from BM25, the top three
+abstracts from reranked retrieval, and an oracle with up to three annotated evidence abstracts.
+Moving from BM25 to reranked context raised grounded accuracy from
 30.0% to 35.0% (18/60 → 21/60) and lowered stance accuracy from 61.7% to 56.7% (37/60 → 34/60).
 These counts are descriptive, cover only this 60-claim sample, and are separate from the
 retrieval inference above. See the [M7 report](docs/M7_RESULTS.md) and
